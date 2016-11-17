@@ -22,6 +22,8 @@ RUN chmod +x /usr/bin/start-kafka.sh
 # Supervisor config
 ADD supervisor/kafka.conf supervisor/zookeeper.conf /etc/supervisor/conf.d/
 
+VOLUME /tmp/kafka-logs
+
 # 2181 is zookeeper, 9092 is kafka
 EXPOSE 2181 9092
 
